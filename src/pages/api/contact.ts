@@ -6,19 +6,19 @@ import { Resend } from 'resend';
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
 export const POST: APIRoute = async ({ request }) => {
-  const data = await request.formData();
+  const body = await request.json();
 
-  const name    = data.get('name')?.toString() || '';
-  const email   = data.get('email')?.toString() || '';
-  const subject = data.get('subject')?.toString() || '';
-  const message = data.get('message')?.toString() || '';
+  const name    = body.name?.toString() || '';
+  const email   = body.email?.toString() || '';
+  const subject = body.subject?.toString() || '';
+  const message = body.message?.toString() || '';
 
   if (!name || !email || !message) {
     return new Response(JSON.stringify({ error: 'Faltan campos requeridos' }), { status: 400 });
   }
 
   const { error } = await resend.emails.send({
-    from: 'Portfolio <onboarding@resend.dev>',
+    from: 'onboarding@resend.dev',
     to: 'alexcabreracon@gmail.com',
     subject: `[Portfolio] ${subject}`,
     html: `

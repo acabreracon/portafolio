@@ -1,141 +1,206 @@
 ---
-
 const links = [
-  {
-    label: 'Email',
-    value: 'alejandrocabrerac@hotmail.com',
-    href: 'mailto:alejandrocabrerac@hotmail.com',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#00ff87" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>`
-  },
-  {
-    label: 'LinkedIn',
-    value: '/in/alejandro-fernando-cabrera-contreras',
-    href: 'https://www.linkedin.com/in/alejandro-fernando-cabrera-contreras-63970a1b0/',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00ff87" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`
-  },
-  {
-    label: 'GitHub',
-    value: 'github.com/acabreracon',
-    href: 'https://github.com/acabreracon',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00ff87" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>`
-  },
-  {
-    label: 'Facebook',
-    value: 'facebook.com/alex.cabrera.con',
-    href: 'https://www.facebook.com/alex.cabrera.con',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00ff87" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>`
-  },
-  {
-    label: 'Instagram',
-    value: 'instagram.com/acabreracon',
-    href: 'https://www.instagram.com/acabreracon',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#00ff87" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="#00ff87"/></svg>`
-  }
+    {
+        label: "Email",
+        value: "alejandrocabrerac@hotmail.com",
+        href: "mailto:alejandrocabrerac@hotmail.com",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#00ff87" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>`,
+    },
+    {
+        label: "LinkedIn",
+        value: "/in/alejandro-fernando-cabrera-contreras",
+        href: "https://www.linkedin.com/in/alejandro-fernando-cabrera-contreras-63970a1b0/",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00ff87" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`,
+    },
+    {
+        label: "GitHub",
+        value: "github.com/acabreracon",
+        href: "https://github.com/acabreracon",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00ff87" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>`,
+    },
+    {
+        label: "Facebook",
+        value: "facebook.com/alex.cabrera.con",
+        href: "https://www.facebook.com/alex.cabrera.con",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00ff87" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>`,
+    },
+    {
+        label: "Instagram",
+        value: "instagram.com/acabreracon",
+        href: "https://www.instagram.com/acabreracon",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#00ff87" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="#00ff87"/></svg>`,
+    },
 ];
 ---
 
 <section id="contact" class="px-[6vw] py-28 border-t border-[#1e1e1e]">
+    <!-- Header -->
+    <div class="flex items-baseline gap-4 mb-16">
+        <span class="text-[#00ff87] text-xs tracking-widest">03</span>
+        <h2
+            class="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-black tracking-tight"
+        >
+            Contacto
+        </h2>
+        <div class="flex-1 h-px bg-[#1e1e1e] ml-4"></div>
+    </div>
 
-  <!-- Header -->
-  <div class="flex items-baseline gap-4 mb-16">
-    <span class="text-[#00ff87] text-xs tracking-widest">03</span>
-    <h2 class="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-black tracking-tight">Contacto</h2>
-    <div class="flex-1 h-px bg-[#1e1e1e] ml-4"></div>
-  </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+        <!-- Left -->
+        <div>
+            <h3
+                class="font-display text-[clamp(2rem,5vw,4rem)] font-black leading-none tracking-tight mb-6"
+            >
+                ¿Dónde puedes <span class="text-[#00ff87]">contactarme?</span>
+            </h3>
+            <p class="text-sm text-[#555] leading-loose mb-10">
+                Te dejó mis enlaces de contacto directo. ¡Siempre estoy abierto
+                a nuevas oportunidades y conexiones interesantes!
+            </p>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-
-    <!-- Left -->
-    <div>
-      <h3 class="font-display text-[clamp(2rem,5vw,4rem)] font-black leading-none tracking-tight mb-6">
-        ¿Dónde puedes <span class="text-[#00ff87]">contactarme?</span>
-      </h3>
-      <p class="text-sm text-[#555] leading-loose mb-10">
-        Te dejó mis enlaces de contacto directo. ¡Siempre estoy abierto a nuevas oportunidades y conexiones interesantes!
-      </p>
-
-      <div class="flex flex-col gap-3">
-        {links.map(link => (
-          <a href={link.href} class="flex items-center justify-between px-5 py-4 border border-[#1e1e1e] hover:border-[#00ff87] hover:bg-[#00ff87]/5 transition-all group">
-            <div class="flex items-center gap-4">
-              <div class="w-8 h-8 flex items-center justify-center bg-[#111]" set:html={link.icon}></div>
-              <div>
-                <div class="text-sm group-hover:text-[#00ff87] transition-colors">{link.label}</div>
-                <div class="text-xs text-[#555]">{link.value} </div>
-              </div>
+            <div class="flex flex-col gap-3">
+                {
+                    links.map((link) => (
+                        <a
+                            href={link.href}
+                            class="flex items-center justify-between px-5 py-4 border border-[#1e1e1e] hover:border-[#00ff87] hover:bg-[#00ff87]/5 transition-all group"
+                        >
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-8 h-8 flex items-center justify-center bg-[#111]"
+                                    set:html={link.icon}
+                                />
+                                <div>
+                                    <div class="text-sm group-hover:text-[#00ff87] transition-colors">
+                                        {link.label}
+                                    </div>
+                                    <div class="text-xs text-[#555]">
+                                        {link.value}{" "}
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-[#555] group-hover:text-[#00ff87] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
+                                ↗
+                            </span>
+                        </a>
+                    ))
+                }
             </div>
-            <span class="text-[#555] group-hover:text-[#00ff87] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">↗</span>
-          </a>
-        ))}
-      </div>
+        </div>
+
+        <!-- Form -->
+        <form id="contactForm" class="flex flex-col gap-4">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col gap-2">
+                    <label class="text-xs uppercase tracking-widest text-[#555]"
+                        >Nombre</label
+                    >
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Escribe tu nombre completo"
+                        required
+                        class="bg-[#111] border border-[#1e1e1e] text-sm px-4 py-3 font-mono text-[#f0f0f0] placeholder-[#555]/50 focus:border-[#00ff87] outline-none transition-colors"
+                    />
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-xs uppercase tracking-widest text-[#555]"
+                        >Email</label
+                    >
+                    <input
+                        name="email"
+                        type="email"
+                        placeholder="Escribe tu email"
+                        required
+                        class="bg-[#111] border border-[#1e1e1e] text-sm px-4 py-3 font-mono text-[#f0f0f0] placeholder-[#555]/50 focus:border-[#00ff87] outline-none transition-colors"
+                    />
+                </div>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label class="text-xs uppercase tracking-widest text-[#555]"
+                    >Asunto</label
+                >
+                <input
+                    name="subject"
+                    type="text"
+                    placeholder="Escribe el asunto del mensaje"
+                    class="bg-[#111] border border-[#1e1e1e] text-sm px-4 py-3 font-mono text-[#f0f0f0] placeholder-[#555]/50 focus:border-[#00ff87] outline-none transition-colors"
+                />
+            </div>
+            <div class="flex flex-col gap-2">
+                <label class="text-xs uppercase tracking-widest text-[#555]"
+                    >Mensaje</label
+                >
+                <textarea
+                    name="message"
+                    rows="5"
+                    placeholder="Cuéntame sobre tu proyecto..."
+                    required
+                    class="bg-[#111] border border-[#1e1e1e] text-sm px-4 py-3 font-mono text-[#f0f0f0] placeholder-[#555]/50 focus:border-[#00ff87] outline-none transition-colors resize-none"
+                >
+                </textarea>
+            </div>
+            <button
+                id="submitBtn"
+                type="submit"
+                class="self-start bg-[#00ff87] text-black font-mono font-semibold text-xs uppercase tracking-wider px-6 py-3 hover:opacity-80 transition-opacity"
+            >
+                Enviar mensaje →
+            </button>
+            <p id="formMsg" class="text-xs hidden"></p>
+        </form>
+
+        <script>
+            const form = document.getElementById(
+                "contactForm",
+            ) as HTMLFormElement;
+            const btn = document.getElementById(
+                "submitBtn",
+            ) as HTMLButtonElement;
+            const msg = document.getElementById(
+                "formMsg",
+            ) as HTMLParagraphElement;
+
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                btn.textContent = "Enviando...";
+                btn.disabled = true;
+
+                const formData = new FormData(form);
+                const body = Object.fromEntries(formData.entries());
+
+                const res = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(body),
+                });
+
+                if (res.ok) {
+                    msg.textContent = "✓ Mensaje enviado correctamente.";
+                    msg.style.color = "#00ff87";
+                    form.reset();
+                } else {
+                    msg.textContent = "✗ Hubo un error, intenta de nuevo.";
+                    msg.style.color = "#ff4444";
+                }
+
+                msg.classList.remove("hidden");
+                btn.textContent = "Enviar mensaje →";
+                btn.disabled = false;
+            });
+        </script>
     </div>
-
-    <!-- Form -->
-    <form id="contactForm" class="flex flex-col gap-4">
-  <div class="grid grid-cols-2 gap-4">
-    <div class="flex flex-col gap-2">
-      <label class="text-xs uppercase tracking-widest text-[#555]">Nombre</label>
-      <input name="name" type="text" placeholder="Escribe tu nombre completo" required
-        class="bg-[#111] border border-[#1e1e1e] text-sm px-4 py-3 font-mono text-[#f0f0f0] placeholder-[#555]/50 focus:border-[#00ff87] outline-none transition-colors" />
-    </div>
-    <div class="flex flex-col gap-2">
-      <label class="text-xs uppercase tracking-widest text-[#555]">Email</label>
-      <input name="email" type="email" placeholder="Escribe tu email" required
-        class="bg-[#111] border border-[#1e1e1e] text-sm px-4 py-3 font-mono text-[#f0f0f0] placeholder-[#555]/50 focus:border-[#00ff87] outline-none transition-colors" />
-    </div>
-  </div>
-  <div class="flex flex-col gap-2">
-    <label class="text-xs uppercase tracking-widest text-[#555]">Asunto</label>
-    <input name="subject" type="text" placeholder="Escribe el asunto del mensaje"
-      class="bg-[#111] border border-[#1e1e1e] text-sm px-4 py-3 font-mono text-[#f0f0f0] placeholder-[#555]/50 focus:border-[#00ff87] outline-none transition-colors" />
-  </div>
-  <div class="flex flex-col gap-2">
-    <label class="text-xs uppercase tracking-widest text-[#555]">Mensaje</label>
-    <textarea name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required
-      class="bg-[#111] border border-[#1e1e1e] text-sm px-4 py-3 font-mono text-[#f0f0f0] placeholder-[#555]/50 focus:border-[#00ff87] outline-none transition-colors resize-none">
-    </textarea>
-  </div>
-  <button id="submitBtn" type="submit" class="self-start bg-[#00ff87] text-black font-mono font-semibold text-xs uppercase tracking-wider px-6 py-3 hover:opacity-80 transition-opacity">
-    Enviar mensaje →
-  </button>
-  <p id="formMsg" class="text-xs hidden"></p>
-</form>
-
-<script>
-  const form = document.getElementById('contactForm') as HTMLFormElement;
-  const btn  = document.getElementById('submitBtn') as HTMLButtonElement;
-  const msg  = document.getElementById('formMsg') as HTMLParagraphElement;
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    btn.textContent = 'Enviando...';
-    btn.disabled = true;
-
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      body: new FormData(form),
-    });
-
-    if (res.ok) {
-      msg.textContent = '✓ Mensaje enviado correctamente.';
-      msg.style.color = '#00ff87';
-      form.reset();
-    } else {
-      msg.textContent = '✗ Hubo un error, intenta de nuevo.';
-      msg.style.color = '#ff4444';
-    }
-
-    msg.classList.remove('hidden');
-    btn.textContent = 'Enviar mensaje →';
-    btn.disabled = false;
-  });
-</script>
-
-  </div>
 </section>
 
 <!-- Footer -->
-<footer class="border-t border-[#1e1e1e] px-[6vw] py-6 flex justify-between items-center">
-  <span class="text-xs text-[#555]">© 2026 Tu Nombre — Hecho con <span class="text-[#00ff87]">♥</span></span>
-  <span class="text-xs text-[#555]">Astro · TypeScript · Tailwind</span>
+<footer
+    class="border-t border-[#1e1e1e] px-[6vw] py-6 flex justify-between items-center"
+>
+    <span class="text-xs text-[#555]"
+        >© 2026 Tu Nombre — Hecho con <span class="text-[#00ff87]">♥</span
+        ></span
+    >
+    <span class="text-xs text-[#555]">Astro · TypeScript · Tailwind</span>
 </footer>
