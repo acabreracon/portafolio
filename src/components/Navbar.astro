@@ -1,0 +1,25 @@
+---
+const links = [
+  { href: '#projects', label: 'Proyectos' },
+  { href: '#about', label: 'Sobre mí' },
+  { href: '#contact', label: 'Contacto' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-[6vw] py-5 border-b border-[#1e1e1e] bg-[#080808]/85 backdrop-blur-md">
+  <a href="#hero" class="font-display text-lg font-black tracking-tight">
+    dev<span class="text-[#00ff87]">.</span>
+  </a>
+  <ul class="flex gap-10 list-none">
+    {links.map(link => (
+      <li>
+        <a
+          href={link.href}
+          class="text-[#555] text-xs uppercase tracking-widest hover:text-[#00ff87] transition-colors"
+        >
+          {link.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

@@ -1,0 +1,245 @@
+---
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+const totalProjects = projects.length;
+
+const allTechs = projects.flatMap((p) => p.data.techs);
+const uniqueTechs = [...new Set(allTechs)].length;
+
+// Esto lo ajustas tú manualmente con tus años reales de experiencia
+const yearsExp = 5;
+---
+
+<section
+    id="hero"
+    class="min-h-screen flex items-center px-[6vw] pt-24 relative overflow-hidden"
+>
+    <!-- Grid background -->
+    <div
+        class="absolute inset-0"
+        style="opacity:0.4; background-image: linear-gradient(#1e1e1e 1px, transparent 1px), linear-gradient(90deg, #1e1e1e 1px, transparent 1px); background-size: 60px 60px;"
+    >
+    </div>
+
+    <!-- Glow -->
+    <div
+        class="absolute w-[600px] h-[600px] rounded-full pointer-events-none"
+        style="top:50%; left:30%; transform:translate(-50%,-50%); background: radial-gradient(circle, rgba(0,255,135,0.06) 0%, transparent 70%);"
+    >
+    </div>
+
+    <div class="relative z-10 max-w-3xl w-full">
+        <div
+            class="hero-item inline-flex items-center gap-2 mb-6"
+            style="color:#00ff87; font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase;"
+        >
+            <span
+                style="width:24px; height:1px; background:#00ff87; display:block;"
+            ></span>
+            Backend Developer · Disponible para proyectos
+        </div>
+
+        <h1
+            class="hero-item mb-6"
+            style="font-family:'Syne',sans-serif; font-size:clamp(2.5rem,7vw,6.5rem); font-weight:800; line-height:0.95; letter-spacing:-0.04em;"
+        >
+            Alejandro<br />
+            <span style="color:#00ff87;">Fernando Cabrera</span><br />
+            Contreras.
+        </h1>
+
+        <p
+            class="hero-item mb-10"
+            style="font-size:0.88rem; color:#555; max-width:480px; line-height:2;"
+        >
+            Construyo sistemas escalables, APIs robustas y arquitecturas backend
+            que soportan productos reales. Especializado en rendimiento y código
+            limpio.
+        </p>
+
+        <div class="hero-item flex gap-4 flex-wrap">
+            <a
+                href="#projects"
+                style="background:#00ff87; color:#000; font-family:'IBM Plex Mono',monospace; font-size:0.78rem; font-weight:600; letter-spacing:0.05em; padding:0.75rem 1.6rem; text-decoration:none; text-transform:uppercase;"
+            >
+                Ver proyectos →
+            </a>
+            <div class="cv-wrapper">
+                <button class="cv-btn" id="cvBtn">↓ Descargar CV</button>
+                <div class="cv-dropdown" id="cvDropdown">
+                    <a href="/CV_Alejandro_Cabrera.pdf" download>🇲🇽 Español</a>
+                    <a href="/CV_Alejandro_Cabrera_ English.pdf" download
+                        >🇺🇸 English</a
+                    >
+                </div>
+            </div>
+            <!-- <a href="#contact" style="border:1px solid #1e1e1e; color:#555; font-family:'IBM Plex Mono',monospace; font-size:0.78rem; letter-spacing:0.05em; padding:0.75rem 1.6rem; text-decoration:none; text-transform:uppercase;">
+        Trabajemos juntos
+      </a> -->
+        </div>
+
+        <!-- Stats: solo visible en desktop -->
+        <div
+            class="hero-stats hidden md:flex gap-12 mt-16 pt-10"
+            style="border-top: 1px solid #1e1e1e;"
+        >
+            <div>
+                <div
+                    style="font-family:'Syne',sans-serif; font-size:2.5rem; font-weight:800;"
+                >
+                    {totalProjects}<span style="color:#00ff87;">+</span>
+                </div>
+                <div
+                    style="color:#555; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase;"
+                >
+                    Proyectos
+                </div>
+            </div>
+            <div>
+                <div
+                    style="font-family:'Syne',sans-serif; font-size:2.5rem; font-weight:800;"
+                >
+                    {yearsExp}<span style="color:#00ff87;">+</span>
+                </div>
+                <div
+                    style="color:#555; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase;"
+                >
+                    Años exp.
+                </div>
+            </div>
+            <div>
+                <div
+                    style="font-family:'Syne',sans-serif; font-size:2.5rem; font-weight:800;"
+                >
+                    {uniqueTechs}<span style="color:#00ff87;">+</span>
+                </div>
+                <div
+                    style="color:#555; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase;"
+                >
+                    Tecnologías
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero-item {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeUp 0.7s ease forwards;
+    }
+
+    .hero-item:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+    .hero-item:nth-child(2) {
+        animation-delay: 0.35s;
+    }
+    .hero-item:nth-child(3) {
+        animation-delay: 0.5s;
+    }
+    .hero-item:nth-child(4) {
+        animation-delay: 0.65s;
+    }
+
+    .hero-stats {
+        opacity: 0;
+        animation: fadeIn 1s ease 1s forwards;
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .cv-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .cv-btn {
+        border: 1px solid #00ff87;
+        color: #00ff87;
+        background: transparent;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.78rem;
+        letter-spacing: 0.05em;
+        padding: 0.75rem 1.6rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition:
+            background 0.2s,
+            color 0.2s;
+    }
+
+    .cv-btn:hover {
+        background: #00ff87;
+        color: #000;
+    }
+
+    .cv-dropdown {
+        display: none;
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        background: #111;
+        border: 1px solid #1e1e1e;
+        min-width: 160px;
+        z-index: 10;
+        flex-direction: column;
+    }
+
+    .cv-dropdown.open {
+        display: flex;
+    }
+
+    .cv-dropdown a {
+        padding: 0.7rem 1rem;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.78rem;
+        color: #555;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition:
+            color 0.2s,
+            background 0.2s;
+    }
+
+    .cv-dropdown a:hover {
+        color: #00ff87;
+        background: rgba(0, 255, 135, 0.05);
+    }
+</style>
+<script>
+    const btn = document.getElementById("cvBtn");
+    const dropdown = document.getElementById("cvDropdown");
+
+    btn?.addEventListener("click", () => {
+        dropdown?.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!btn?.contains(e.target as Node)) {
+            dropdown?.classList.remove("open");
+        }
+    });
+</script>

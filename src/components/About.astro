@@ -1,0 +1,104 @@
+---
+const skills = [
+    {
+        group: "Lenguajes",
+        items: [
+            "C#",
+            "Python",
+            "JavaScript",
+            "SQL",
+            "PHP",
+        ] /*["C#", "Python", "JavaScript", "SQL", "PHP", "Go", "Rust"]*/,
+    },
+    {
+        group: "Frameworks & Librerías",
+        items: [
+            "Node.js",
+            "Vue",
+            "React",
+            "Astro",
+            "Kendo UI",
+            "jQuery",
+            "Ajax",
+        ] /*["Node.js", "Vue", "React", "Astro", "Kendo UI", "Express", "Django", "Flask"]*/,
+    },
+    {
+        group: "Bases de datos",
+        items: [
+            "SQL Server",
+            "MySQL",
+        ] /*["MySQL", "PostgreSQL", "MongoDB", "Redis"]*/,
+    },
+    {
+        group: "DevOps & Cloud",
+        items: [
+            "Azure",
+            "AWS",
+        ] /*["Docker", "Kubernetes", "AWS", "Terraform", "GitHub Actions"]*/,
+    },
+    {
+        group: "Herramientas",
+        items: [
+            "Visual Studio",
+            "VS Code",
+            "Postman",
+            "Jira",
+            "SourceTree",
+            "Git",
+        ] /*["Visual Studio", "VS Code", "Postman", "Jira", "SourceTree", "Figma"]*/,
+    },
+];
+---
+
+<section id="about" class="px-[6vw] py-28 border-t border-[#1e1e1e]">
+    <!-- Header -->
+    <div class="flex items-baseline gap-4 mb-16">
+        <span class="text-[#00ff87] text-xs tracking-widest">02</span>
+        <h2
+            class="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-black tracking-tight"
+        >
+            Sobre mí
+        </h2>
+        <div class="flex-1 h-px bg-[#1e1e1e] ml-4"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+        <!-- Bio -->
+        <div class="flex flex-col gap-5 text-sm text-[#555] leading-loose">
+            <p>Soy <strong class="text-[#f0f0f0] font-medium">Ingeniero en Tecnologías de la Información y Comunicación</strong> enfocado en construir APIs y sistemas estructurados. Me especializo en optimizar consultas y lógica de negocio en bases de datos, así como en desarrollar servicios backend escalables y mantenibles. 
+            </p>
+
+            <p>Trabajo principalmente con <strong class="text-[#f0f0f0] font-medium">C#, Node.js, PHP, Python y SQL Server</strong>, integrando servicios externos, automatizando procesos y desplegando soluciones en la nube. Me interesa especialmente la combinación entre backend tradicional y sistemas con IA aplicada.
+            </p>
+
+            <p>Tengo conocimiento básico en <strong class="text-[#f0f0f0] font-medium">HTML, CSS, Vue, Astro, React</strong> como también en <strong class="text-[#f0f0f0] font-medium">Microsoft Azure</strong> y <strong class="text-[#f0f0f0] font-medium">AWS</strong>, desarrollando asistentes virtuales y APIs orientadas a negocio. Disfruto escribir código mantenible, optimizar consultas y entender cómo mejorar el rendimiento desde la arquitectura.
+            </p>
+
+            <p>Actualmente <strong class="text-[#f0f0f0] font-medium">disponible para oportunidades Junior/Mid</strong> donde pueda seguir creciendo, asumir más responsabilidad técnica y aportar en proyectos desafiantes.
+            </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="flex flex-col gap-8">
+            {
+                skills.map(({ group, items }) => (
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#00ff87] text-xs uppercase tracking-widest">
+                                {group}
+                            </span>
+                            <div class="flex-1 h-px bg-[#1e1e1e]" />
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            {items.map((item) => (
+                                <span class="text-xs px-3 py-1 bg-[#111] border border-[#1e1e1e] text-[#f0f0f0] hover:border-[#00ff87] hover:text-[#00ff87] hover:bg-[#00ff87]/5 transition-all cursor-default">
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
